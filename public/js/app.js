@@ -107,6 +107,25 @@ $(document).ready(function () {
       }
     });
   }
+
+  $(document).on('click', '.delete-button', function () {
+    var dataId = $(this).data('id');
+    console.log(dataId);
+    var myThis = $(this);
+    $.ajax({
+      url: 'http://localhost/php-boolcrud-ajax/database/delete.php',
+      method: 'POST',
+      data: {
+        id: dataId
+      },
+      success: function success(data) {
+        console.log(data);
+      },
+      error: function error() {
+        alert('Si è verificato un errore');
+      }
+    });
+  });
 });
 
 function printGuests(results) {
