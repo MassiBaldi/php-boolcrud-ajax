@@ -32,7 +32,7 @@
       <td>{{name}}</td>
       <td>{{lastname}}</td>
       <td>
-        <a href="#" class="btn btn-primary">Visualizza</a>
+        <a href="http://localhost/php-boolcrud-ajax/show.php?id={{id}}" class="btn btn-primary">Visualizza</a>
       </td>
       <td>
         <button class="btn btn-danger delete-button" data-id="{{id}}">Cancella</button>
